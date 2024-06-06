@@ -55,6 +55,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 20px;
     font-weight: 400;
+    animation: moveInLeft .8s linear;
 }
 
 .heading-primary-sub {
@@ -64,4 +65,40 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     text-align: center;
+    animation: moveInRight .8s linear;
+}
+
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    50% {
+        opacity: .5;
+    }
+    80% {
+        transform: translateX(25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    50% {
+        opacity: .5;
+    }
+    80% {
+        transform: translateX(-25px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
