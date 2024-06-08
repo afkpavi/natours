@@ -6,7 +6,9 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,22 +27,24 @@ body {
 .header {
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  background: linear-gradient(to right bottom, rgba(126, 213, 111, 0.5215686275), rgba(40, 180, 133, 0.4509803922)), url(../img/hero.jpg);
+  background: linear-gradient(
+      to right bottom,
+      rgba(85, 197, 122, 0.2),
+      rgba(40, 180, 133, 0.6)
+    ),
+    url(../img/hero.jpg);
   background-position: top;
   position: relative;
 }
-
-.logo-box {
+.header__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-
-.logo-img {
+.header__logo-img {
   height: 3rem;
 }
-
-.text-box {
+.header__text-box {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -103,7 +107,8 @@ body {
     transform: translateX(0);
   }
 }
-.btn:link, btn:visited {
+.btn:link,
+btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
@@ -134,7 +139,7 @@ body {
   animation: moveInBottom 0.6s;
 }
 
-.btn-animated::after {
+.btn-animated:hover::after {
   position: absolute;
   content: "";
   background: #fff;
@@ -146,7 +151,6 @@ body {
   border-radius: 10rem;
   animation: scaledFade 0.2s;
   animation-fill-mode: backwards;
-  animation-delay: 0.5s;
 }
 
 @keyframes scaledFade {
