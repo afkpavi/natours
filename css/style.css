@@ -1,11 +1,3 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
 *,
 *::after,
 *::before {
@@ -24,38 +16,9 @@ body {
   padding: 3rem;
 }
 
-.header {
-  height: 95vh;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  background: linear-gradient(
-      to right bottom,
-      rgba(85, 197, 122, 0.2),
-      rgba(40, 180, 133, 0.6)
-    ),
-    url(../img/hero.jpg);
-  background-position: top;
-  position: relative;
-}
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
-.header__logo-img {
-  height: 3rem;
-}
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  text-align: center;
-}
-
 .heading-primary {
   color: #fff;
 }
-
 .heading-primary-main {
   display: block;
   font-size: 5rem;
@@ -64,7 +27,6 @@ body {
   font-weight: 400;
   animation: moveInLeft 0.8s linear;
 }
-
 .heading-primary-sub {
   display: block;
   font-size: 2rem;
@@ -107,52 +69,6 @@ body {
     transform: translateX(0);
   }
 }
-.btn:link,
-btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  display: inline-block;
-  padding: 2rem 4rem;
-  border-radius: 10rem;
-  margin-top: 2rem;
-  font-size: 1.6rem;
-}
-
-.btn-white {
-  background: #fff;
-  color: #777;
-  transition: all 0.2s;
-}
-
-.btn-white:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn-white:active {
-  transform: translateY(-0.2rem);
-  box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.4);
-}
-
-.btn-animated {
-  position: relative;
-  animation: moveInBottom 0.6s;
-}
-
-.btn-animated:hover::after {
-  position: absolute;
-  content: "";
-  background: #fff;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: 10rem;
-  animation: scaledFade 0.2s;
-  animation-fill-mode: backwards;
-}
-
 @keyframes scaledFade {
   0% {
     opacity: 1;
@@ -171,6 +87,74 @@ btn:visited {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  padding: 2rem 4rem;
+  border-radius: 10rem;
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+.btn-white {
+  background: #fff;
+  color: #777;
+  transition: all 0.2s;
+}
+.btn-white:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn-white:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.4);
+}
+.btn-animated {
+  position: relative;
+  animation: moveInBottom 0.6s;
+}
+.btn-animated:hover::after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10rem;
+  animation: scaledFade 0.2s;
+  animation-fill-mode: backwards;
+}
+
+.header {
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  background: linear-gradient(
+      to right bottom,
+      rgba(85, 197, 122, 0.2),
+      rgba(40, 180, 133, 0.6)
+    ),
+    url(../img/hero.jpg);
+  background-position: top;
+  position: relative;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo-img {
+  height: 3rem;
+}
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
