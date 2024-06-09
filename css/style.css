@@ -230,32 +230,60 @@ body {
 }
 
 .composition {
-  width: 50%;
+  width: 40%;
   box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
   position: absolute;
   z-index: 1;
-  outline-offset: 2rem;
+  outline-offset: 1rem;
   transition: all 0.3s;
 }
 .composition:hover {
   z-index: 2;
   transform: scale(1.1) translateY(-1rem);
-  outline: 2rem solid #55c57a;
+  outline: 1rem solid #55c57a;
 }
 
 .comp-1 {
-  top: 1rem;
+  top: -4rem;
   left: 0;
 }
 
 .comp-2 {
-  top: 7rem;
-  right: 6rem;
+  top: 0rem;
+  left: 20rem;
 }
 
 .comp-3 {
-  top: 15rem;
-  left: 12rem;
+  top: 6rem;
+  left: 6rem;
+}
+
+.features__box {
+  width: calc((100% - 4rem) / 4 - 4rem);
+  float: left;
+  padding: 2rem 1rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 2rem 4rem rgba(87, 85, 85, 0.8);
+  transition: all 0.2s;
+}
+.features__box:hover {
+  transform: translateY(-2rem) scale(1.1);
+}
+.features__box--icon {
+  background: linear-gradient(to right, #28b485, #7ed56f);
+  background-clip: text;
+  color: transparent;
+  font-size: 8rem;
+}
+.features__box:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.paragraph {
+  text-align: start;
+  font-size: 1.6rem;
 }
 
 .row {
@@ -320,10 +348,35 @@ body {
   width: calc((100% - 4rem) / 2);
 }
 
+.features__col {
+  margin-left: 8rem;
+}
+.features__col:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .section-about {
   background: #f7f7f7;
   padding: 25rem 0;
   margin-top: -20vh;
+}
+
+.section-features {
+  background: linear-gradient(
+      to right,
+      rgba(40, 180, 133, 0.8),
+      rgba(126, 213, 111, 0.4)
+    ),
+    url("/img/nat-4.jpg");
+  padding: 20rem 5rem;
+  background-position: top;
+  transform: skewY(-7deg);
+  margin-top: -12rem;
+}
+.section-features > * {
+  transform: skewY(7deg);
 }
 
 /*# sourceMappingURL=style.css.map */

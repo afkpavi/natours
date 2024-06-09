@@ -65,3 +65,8 @@
   float: left;
   width: calc((100% - #{$gutter-horizontal}) / 2);
 }
+
+.features__col {
+  @include clearfix;
+  margin-left: calc(2 * $gutter-horizontal);
+}
