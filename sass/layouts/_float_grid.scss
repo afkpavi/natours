@@ -58,4 +58,10 @@
 .col-text {
   float: left;
   width: calc((100% - #{$gutter-horizontal}) / 2);
+  padding-right: 2rem;
+}
+
+.col-imgs {
+  float: left;
+  width: calc((100% - #{$gutter-horizontal}) / 2);
 }
