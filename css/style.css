@@ -37,6 +37,30 @@ body {
   animation: moveInRight 0.8s linear;
 }
 
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+}
+.heading-secondary:hover {
+  transform: skewY(2deg) skewX(20deg) scale(1.1);
+  text-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.info__paragraph {
+  font-size: 1.6rem;
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -88,6 +112,22 @@ body {
     transform: translateY(0);
   }
 }
+.u-center-text {
+  text-align: center;
+}
+
+.u-mb-sm {
+  margin-bottom: 1rem;
+}
+
+.u-mb-md {
+  margin-bottom: 2rem;
+}
+
+.u-mb-lg {
+  margin-bottom: 6rem;
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -127,6 +167,30 @@ body {
   border-radius: 10rem;
   animation: scaledFade 0.2s;
   animation-fill-mode: backwards;
+}
+
+.btn-info {
+  display: inline-block;
+  margin-top: 2rem;
+}
+.btn-info:link,
+.btn-info:visited {
+  text-decoration: none;
+  color: #55c57a;
+  font-size: 1.6rem;
+  border-bottom: 1.5px solid #28b485;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.btn-info:hover {
+  background: #28b485;
+  color: #fff;
+  transform: translateY(-1rem) scale(1.2);
+  box-shadow: 0.2rem 0.4rem 0.6rem rgba(0, 0, 0, 0.4);
+  margin-left: 1rem;
+}
+.btn-info:active {
+  transform: translateY(0);
 }
 
 .header {
@@ -169,7 +233,7 @@ body {
   clear: both;
 }
 .row:not(:last-child) {
-  margin-bottom: 4rem;
+  margin-bottom: 8rem;
 }
 .row [class^="col-"] {
   background: orangered;
@@ -195,6 +259,28 @@ body {
 }
 .row .col-3-of-4 {
   width: calc(3 * (100% - 3 * 4rem) / 4 + 2 * 4rem);
+}
+
+.about__info {
+  max-width: 180rem;
+  margin: auto;
+  padding: 0 5%;
+}
+.about__info:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col-text {
+  float: left;
+  width: calc((100% - 4rem) / 2);
+}
+
+.section-about {
+  background: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -20vh;
 }
 
 /*# sourceMappingURL=style.css.map */

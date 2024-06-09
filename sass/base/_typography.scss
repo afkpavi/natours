@@ -26,3 +26,28 @@ body {
     animation: moveInRight 0.8s linear;
   }
 }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  background: linear-gradient(to right, $color-alpha, $color-secondary);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: skewY(2deg) skewX(20deg) scale(1.1);
+    text-shadow: 1rem 2rem 2rem rgba(black, $alpha: 0.4);
+  }
+}
+
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.info__paragraph {
+  font-size: 1.6rem;
+}
