@@ -70,3 +70,18 @@
   @include clearfix;
   margin-left: calc(2 * $gutter-horizontal);
 }
+
+.tours-row {
+  margin: 0 auto;
+  @include clearfix;
+}
+
+.tours-col {
+  float: left;
+  width: calc(
+    ((100% - #{$gutter-horizontal}) / 3) - (2 * #{$gutter-horizontal})
+  );
+  &:not(:last-child) {
+    margin-right: $gutter-vertical;
+  }
+}
