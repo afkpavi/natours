@@ -323,16 +323,21 @@ body {
   transform: rotateY(180deg);
 }
 .card_img {
-  background: linear-gradient(
-      to right,
-      rgba(255, 119, 48, 0.2),
-      rgba(255, 185, 0, 0.2)
-    ),
-    url("../img/nat-5.jpg");
   width: 100%;
   height: 23rem;
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  background-blend-mode: screen;
+  background-size: cover;
+}
+.card_img--1 {
+  background-image: linear-gradient(#ff7730, #ffb900), url("../img/nat-5.jpg");
+}
+.card_img--2 {
+  background-image: linear-gradient(#28b485, #7ed56f), url("../img/nat-6.jpg");
+}
+.card_img--3 {
+  background-image: linear-gradient(#5643fa, #2998ff), url("../img/nat-7.jpg");
 }
 .card_title {
   font-size: 3rem;
@@ -343,17 +348,34 @@ body {
   right: 0rem;
   color: #fff;
   text-align: right;
-  background: linear-gradient(
-    to right,
-    rgba(255, 119, 48, 0.85),
-    rgba(255, 185, 0, 0.85)
-  );
-  width: 65%;
+  max-width: 65%;
+  min-width: 28rem;
 }
 .card_title span {
   padding: 1rem 1.5rem;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+.card_title--1 {
+  background: linear-gradient(
+    to right,
+    rgba(255, 119, 48, 0.85),
+    rgba(255, 185, 0, 0.85)
+  );
+}
+.card_title--2 {
+  background: linear-gradient(
+    to right,
+    rgba(40, 180, 133, 0.85),
+    rgba(126, 213, 111, 0.85)
+  );
+}
+.card_title--3 {
+  background: linear-gradient(
+    to right,
+    rgba(86, 67, 250, 0.85),
+    rgba(41, 152, 255, 0.85)
+  );
 }
 .card_perks {
   list-style: none;

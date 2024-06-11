@@ -51,16 +51,25 @@
   }
 
   &_img {
-    background: linear-gradient(
-        to right,
-        rgba($color-orange-dark, 0.2),
-        rgba($color-orange-light, 0.2)
-      ),
-      url("../img/nat-5.jpg");
     width: 100%;
     height: 23rem;
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    background-blend-mode: screen;
+    background-size: cover;
+
+    &--1 {
+      background-image: linear-gradient($color-orange-dark, $color-orange-light),
+        url("../img/nat-5.jpg");
+    }
+    &--2 {
+      background-image: linear-gradient($color-secondary, $color-alpha),
+        url("../img/nat-6.jpg");
+    }
+    &--3 {
+      background-image: linear-gradient($color-blue-dark, $color-blue-light),
+        url("../img/nat-7.jpg");
+    }
   }
 
   &_title {
@@ -72,16 +81,35 @@
     right: 0rem;
     color: $color-white;
     text-align: right;
-    background: linear-gradient(
-      to right,
-      rgba($color-orange-dark, 0.85),
-      rgba($color-orange-light, 0.85)
-    );
-    width: 65%;
+    max-width: 65%;
+    min-width: 28rem;
+
     span {
       padding: 1rem 1.5rem;
       -webkit-box-decoration-break: clone;
       box-decoration-break: clone;
+    }
+
+    &--1 {
+      background: linear-gradient(
+        to right,
+        rgba($color-orange-dark, 0.85),
+        rgba($color-orange-light, 0.85)
+      );
+    }
+    &--2 {
+      background: linear-gradient(
+        to right,
+        rgba($color-secondary, 0.85),
+        rgba($color-alpha, 0.85)
+      );
+    }
+    &--3 {
+      background: linear-gradient(
+        to right,
+        rgba($color-blue-dark, 0.85),
+        rgba($color-blue-light, 0.85)
+      );
     }
   }
 
