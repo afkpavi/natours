@@ -314,7 +314,28 @@ body {
   background: linear-gradient(to right bottom, #7ed56f, #28b485);
 }
 .card__side-3 {
-  background: linear-gradient(to right bottom, #2998ff, #2998ff);
+  background: linear-gradient(to right bottom, #5643fa, #2998ff);
+}
+.card__side--back {
+  position: relative;
+}
+.card__side--back__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  color: #fff;
+  text-align: center;
+}
+.card__side--back__cta-only {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+.card__side--back__cta-price {
+  font-size: 6rem;
+  font-weight: 300;
+  margin-bottom: 8rem;
 }
 .card:hover .card__side--back {
   transform: rotateY(0);
