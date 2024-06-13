@@ -128,6 +128,14 @@ body {
   margin-bottom: 6rem;
 }
 
+.u-mb-xlg {
+  margin-bottom: 10rem;
+}
+
+.u-mt-xlg {
+  margin-top: 10rem;
+}
+
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -148,6 +156,19 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn-white:active {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.4);
+}
+.btn-green {
+  background: #28b485;
+  color: #fff;
+  transition: all 0.2s;
+}
+.btn-green:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+.btn-green:active {
   transform: translateY(-0.2rem);
   box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.4);
 }
@@ -524,7 +545,7 @@ body {
 }
 
 .section-tours {
-  padding: 35rem 25rem;
+  padding: 30rem 25rem;
   background: #f7f7f7;
   margin-top: -15rem;
 }
