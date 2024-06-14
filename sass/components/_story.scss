@@ -1,0 +1,53 @@
+.story {
+  background: $color-white;
+  padding: 5rem;
+  transform: skewX(-12deg);
+  margin: 5rem 0;
+  box-shadow: 0 3rem 6rem rgba(#000, 0.2);
+  & > * {
+    transform: skewX(12deg);
+  }
+  &__profile {
+    float: left;
+    position: relative;
+    height: 15rem;
+    width: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    margin-right: 4rem;
+    &-avatar {
+      width: 100%;
+      height: 100%;
+      transform: scale(1.2);
+      transition: all 0.2s;
+    }
+    &-name {
+      position: absolute;
+      font-size: 2rem;
+      color: $color-white;
+      font-weight: 600;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      text-transform: uppercase;
+      width: 75%;
+      text-align: center;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+  }
+
+  &__text {
+    font-size: 1.8rem;
+  }
+
+  &:hover &__profile-avatar {
+    transform: scale(1);
+    filter: blur(3px) brightness(80%);
+  }
+
+  &:hover &__profile-name {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -20,8 +20,14 @@
   }
 }
 
-.section-tours {
+.section-tours,
+.stories {
   padding: 30rem 25rem;
   background: $color-light-grey;
   margin-top: -15rem;
+}
+
+.stories {
+  padding: 0rem 25rem;
+  padding-bottom: 5rem;
 }
