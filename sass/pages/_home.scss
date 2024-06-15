@@ -33,3 +33,74 @@
   padding-bottom: 5rem;
   padding-top: 5rem;
 }
+
+.booking {
+  background: $color-primary;
+  height: 80rem;
+  position: relative;
+  &__container {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    background-image: linear-gradient(
+        100deg,
+        rgba($color-white, 0.95) 0%,
+        rgba($color-white, 0.95) 50%,
+        transparent 50%
+      ),
+      url("../img/nat-10.jpg");
+
+    background-size: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 0 10rem;
+    transition: all 0.3s;
+    input {
+      font-family: inherit;
+      font-size: 1.6rem;
+      font-weight: 600;
+      display: block;
+      width: 90%;
+      padding: 1.5rem 2rem;
+      outline: none;
+      border: none;
+      border-radius: 2px;
+      border-bottom: 3px solid transparent;
+
+      &:focus {
+        outline: none;
+
+        &:valid {
+          border-bottom: 3px solid $color-secondary;
+        }
+        &:invalid {
+          border-bottom: 3px solid $color-orange-dark;
+        }
+      }
+
+      &:placeholder-shown + label {
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-4rem);
+      }
+    }
+
+    label {
+      transition: all 0.3s;
+      display: block;
+      transform: translateY(1rem);
+      font-family: inherit;
+      font-size: 1.6rem;
+      font-weight: 600;
+      padding-left: 1rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
