@@ -20,14 +20,16 @@
   }
 }
 
-.section-tours,
-.stories {
+.section-tours {
   padding: 30rem 25rem;
   background: $color-light-grey;
   margin-top: -15rem;
+  padding-bottom: 10rem;
 }
 
 .stories {
+  position: relative;
   padding: 0rem 25rem;
   padding-bottom: 5rem;
+  padding-top: 5rem;
 }
