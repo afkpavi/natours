@@ -285,7 +285,7 @@
               <h2 class="heading-secondary">Start booking now</h2>
             </div>
             <input type="name" id="name" required placeholder="Full Name" />
-            <label for="name">Full Name</label>
+            <label class="label__name" for="name">Full Name</label>
 
             <input
               type="email"
@@ -293,7 +293,28 @@
               required
               placeholder="Email Address"
             />
-            <label for="email">Email Address</label>
+            <label class="label__email" for="email">Email Address</label>
+
+            <div class="form__radio__group">
+              <div class="radio__btn">
+                <input type="radio" id="small" name="size" />
+                <label for="small">
+                  <span class="radio-circle"></span>
+                  Small Group</label
+                >
+              </div>
+              <div class="radio__btn">
+                <input type="radio" id="large" name="size" />
+                <label for="large">
+                  <span class="radio-circle"></span>
+                  Large Group</label
+                >
+              </div>
+            </div>
+
+            <div class="form__submit__group">
+              <button class="submit-btn">Next &rarr;</button>
+            </div>
           </form>
         </div>
       </section>

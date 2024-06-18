@@ -112,6 +112,15 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes submit-btn-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scaleX(1.2) scaleY(1.6);
+  }
+}
 .u-center-text {
   text-align: center;
 }
@@ -144,6 +153,7 @@ body {
   margin-top: 6rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
@@ -223,6 +233,45 @@ body {
   transform: translateY(0);
 }
 
+.submit-btn {
+  border: none;
+  margin-top: 5rem;
+  width: 40%;
+  background-color: #28b485;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-weight: 400;
+  font-size: 2rem;
+  position: relative;
+}
+.submit-btn:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #55c57a;
+  opacity: 0;
+}
+.submit-btn:hover::after {
+  animation: submit-btn-animation 0.3s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes submit-btn-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scaleX(1.2) scaleY(1.6);
+  }
+}
 .header {
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -660,7 +709,8 @@ body {
   padding: 0 10rem;
   transition: all 0.3s;
 }
-.booking__form input {
+.booking__form input#name,
+.booking__form input#email {
   font-family: inherit;
   font-size: 1.6rem;
   font-weight: 600;
@@ -671,22 +721,28 @@ body {
   border: none;
   border-radius: 2px;
   border-bottom: 3px solid transparent;
+  transition: all 0.3s;
 }
-.booking__form input:focus {
+.booking__form input#name:focus,
+.booking__form input#email:focus {
   outline: none;
 }
-.booking__form input:focus:valid {
+.booking__form input#name:focus:valid,
+.booking__form input#email:focus:valid {
   border-bottom: 3px solid #28b485;
 }
-.booking__form input:focus:invalid {
+.booking__form input#name:focus:invalid,
+.booking__form input#email:focus:invalid {
   border-bottom: 3px solid #ff7730;
 }
-.booking__form input:placeholder-shown + label {
+.booking__form input#name:placeholder-shown + label,
+.booking__form input#email:placeholder-shown + label {
   visibility: hidden;
   opacity: 0;
   transform: translateY(-4rem);
 }
-.booking__form label {
+.booking__form .label__name,
+.booking__form .label__email {
   transition: all 0.3s;
   display: block;
   transform: translateY(1rem);
@@ -695,8 +751,55 @@ body {
   font-weight: 600;
   padding-left: 1rem;
 }
-.booking__form label:not(:last-child) {
+.booking__form .label__name:not(:last-child),
+.booking__form .label__email:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.form__radio__group {
+  margin-left: 1rem;
+}
+.form__radio__group .radio__btn {
+  float: left;
+  width: 49%;
+}
+.form__radio__group .radio__btn label {
+  font-size: 1.6rem;
+  font-weight: 600;
+  position: relative;
+  padding-left: 2.5rem;
+  cursor: pointer;
+}
+.form__radio__group .radio__btn label .radio-circle {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  border: 0.5rem solid #55c57a;
+  border-radius: 50%;
+  position: absolute;
+  top: -0.4rem;
+  left: -1rem;
+}
+.form__radio__group .radio__btn label .radio-circle:after {
+  content: "";
+  display: inline-block;
+  background: #55c57a;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.form__radio__group .radio__btn input {
+  display: none;
+}
+.form__radio__group .radio__btn input:checked ~ label > .radio-circle:after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
