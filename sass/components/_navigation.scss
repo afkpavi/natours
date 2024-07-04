@@ -75,4 +75,54 @@
     visibility: visible;
     transform: translate(-50%, -50%);
   }
+
+  &__menu-icon {
+    margin-top: 2rem;
+    top: 1.5rem;
+    right: 2.1rem;
+    position: absolute;
+    &,
+    &::before,
+    &::after {
+      position: absolute;
+      display: inline-block;
+      width: 3rem;
+      height: 2px;
+      background-color: #333;
+      transition: all 0.2s;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+    }
+
+    &::before {
+      top: -0.7rem;
+    }
+    &::after {
+      top: 0.7rem;
+    }
+  }
+
+  &__button:hover > &__menu-icon::before {
+    top: -1rem;
+  }
+
+  &__button:hover > &__menu-icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked ~ &__button &__menu-icon {
+    height: 0;
+  }
+
+  &__checkbox:checked ~ &__button &__menu-icon::before {
+    transform: rotate(135deg);
+    top: 0;
+  }
+  &__checkbox:checked ~ &__button &__menu-icon::after {
+    transform: rotate(-135deg);
+    top: 0;
+  }
 }
