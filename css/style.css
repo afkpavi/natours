@@ -627,6 +627,7 @@ body {
   border-radius: 50%;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   background-color: #fff;
+  cursor: pointer;
 }
 .navigation__bg {
   background-image: radial-gradient(#28b485, #7ed56f);
@@ -730,6 +731,113 @@ body {
   top: 0;
 }
 
+.popup {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+  transition: all 0.4s;
+  opacity: 0;
+  visibility: hidden;
+}
+.popup:target {
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+}
+.popup__close {
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  font-size: 2rem;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+}
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  display: table;
+}
+.popup__left {
+  width: 33.33%;
+  display: table-cell;
+  height: 100%;
+}
+.popup__right {
+  width: 66.67%;
+  display: table-cell;
+  vertical-align: top;
+  background-color: #fff;
+  padding: 5rem 5rem;
+  padding-top: 8rem;
+}
+.popup__image {
+  display: block;
+  width: 100%;
+}
+.popup__terms {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.popup__text {
+  columns: 2;
+  font-size: 2rem;
+  hyphens: auto;
+}
+.popup__button {
+  outline: none;
+  text-transform: uppercase;
+  background-color: #28b485;
+  color: #fff;
+  width: 20rem;
+  height: 5rem;
+  border-radius: 100px;
+  border: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s;
+}
+.popup__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 5rem;
+  background-color: #55c57a;
+  z-index: -1;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.4s;
+  opacity: 0;
+}
+.popup__button:hover::after {
+  z-index: 1;
+  animation: btnHovers 0.4s;
+}
+
+@keyframes btnHovers {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.1;
+    transform: scaleX(1.2) scaleY(1.6);
+  }
+}
 .row {
   background: #575555;
   color: #fff;
